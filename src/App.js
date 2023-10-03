@@ -1,14 +1,13 @@
-import React from 'react';
-import CurrentCity from './components/CurrentCity';
-import Forecast from './components/Forecast';
-import OtherCities from './components/OtherCities';
+import bg from './assets/app-bg.png';
+import BackgroundImage from './components/BackgroundImage';
+import WeatherCard from './components/WeatherCard';
 
 const App = ()=> (
-  <React.Fragment>
-    <CurrentCity />
-    <OtherCities />
-    <Forecast />
-  </React.Fragment>
+  <BackgroundImage image={bg}>
+    <div className="flex justify-center items-center h-screen">
+        <WeatherCard />
+    </div>
+  </BackgroundImage>
 )
 
 export default App;
