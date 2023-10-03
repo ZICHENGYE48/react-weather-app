@@ -1,3 +1,5 @@
+import City from "./components/City"
+
 const OtherCities = ()=> {
   const CITIES_MAPPING = [
     {
@@ -22,14 +24,16 @@ const OtherCities = ()=> {
     }
   ]
   return (
-    <div>
+    <div className="mr-12">
+      <div className="text-2xl tracking-widest mb-8">Other Cities</div>
       {
         CITIES_MAPPING.map(({ name, temperature, weather })=> (
-          <div key={name}>
-            {name}
-            {temperature}
-            {weather}
-          </div>
+          <City
+            key={name}
+            name={name}
+            temperature={temperature}
+            weather={weather}
+          />
         ))
       }
     </div>
