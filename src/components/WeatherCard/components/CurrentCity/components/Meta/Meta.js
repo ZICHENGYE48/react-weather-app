@@ -1,10 +1,13 @@
 const Meta = ({
   title,
-  children
+  children,
+  loading
 }) => (
   <div className="text-white/70">
     <h3 className="mb-3">{title}</h3>
-    <div>{children}</div>
+    <div className="text-center">
+      {loading? '...' : children}
+      </div>
   </div>
 )
 

@@ -1,8 +1,9 @@
 const Weather = ({
-  value
+  value,
+  loading
 }) => (
-  <div className="text-white/60 text-2xl text-center">
-    {value}
+  <div className="text-white/60 text-2xl text-center uppercase">
+    {loading ? '...' : value}
   </div>
 )
 

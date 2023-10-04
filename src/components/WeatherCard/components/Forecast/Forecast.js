@@ -41,7 +41,7 @@ const Forecast = () => {
       <div className="flex gap-8">
         {
           FORECAST_MAPPING.map(({day, weather, code, temperature})=> (
-            <DayOfWeek day={day} weather={weather} code={code} temperature={temperature}/>
+            <DayOfWeek key={day} day={day} weather={weather} code={code} temperature={temperature}/>
           ))
         }
       </div>

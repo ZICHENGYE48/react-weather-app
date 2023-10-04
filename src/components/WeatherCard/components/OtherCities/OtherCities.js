@@ -6,7 +6,7 @@ const OtherCities = ()=> {
       name: 'Sydney',
       temperature: 12,
       weather: 'Sunny',
-      code: '04n'
+      code: '10d'
     },
     {
       name: 'Melbourne',
