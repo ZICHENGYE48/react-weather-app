@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getCurrentWeather } from '../../../../apis/getCurrentWeather'
+import { oneCall } from '../../../../apis/oneCall'
 import BackgroundImage from '../../../BackgroundImage'
 import bg from './assets/image.jpeg'
 import Meta from './components/Meta'
@@ -11,13 +11,8 @@ const CurrentCity = () => {
   const [loading,setLoading] = useState(true)
   const [weather,setWeather] = useState()
 
-  const DEFAULT_CITY = {
-    lat: -33.8698439,
-    lon: 151.2082848
-  }
-
   useEffect(()=>{
-    getCurrentWeather(DEFAULT_CITY.lat, DEFAULT_CITY.lon)
+    oneCall()
     .then((response)=> response.data)
     .then((data)=>{
       setWeather(data)
