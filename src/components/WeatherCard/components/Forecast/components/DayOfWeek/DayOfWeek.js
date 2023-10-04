@@ -1,10 +1,18 @@
+import WeatherIcon from "../../../../../WeatherIcon"
+import Temperature from "../../../CurrentCity/components/Temperature"
+
 const DayOfWeek = ({
   day,
-  weather
+  code,
+  weather,
+  temperature
 })=> (
   <div>
     <div>{day}</div>
-    <div>{weather}</div>
+    <div className="my-4">
+      <WeatherIcon code={code} weather={weather}></WeatherIcon>
+    </div>
+    <Temperature value={temperature} />
   </div>
 )
 

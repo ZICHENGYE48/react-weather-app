@@ -5,34 +5,33 @@ const OtherCities = ()=> {
     {
       name: 'Sydney',
       temperature: 12,
-      weather: 'rain'
+      weather: 'Sunny',
+      code: '04n'
     },
     {
       name: 'Melbourne',
       temperature: 13,
-      weather: 'Sunny'
+      weather: 'Sunny',
+      code: '04n'
     },
     {
       name: 'Darwin',
       temperature: 15,
-      weather: 'rain'
-    },
-    {
-      name: 'Perth',
-      temperature: 16,
-      weather: 'rain'
+      weather: 'Sunny',
+      code: '04n'
     }
   ]
   return (
     <div className="mr-12">
       <div className="text-2xl tracking-widest mb-8">Other Cities</div>
       {
-        CITIES_MAPPING.map(({ name, temperature, weather })=> (
-          <City
+        CITIES_MAPPING.map(({ name, temperature, weather, code })=> (
+          <City 
             key={name}
             name={name}
             temperature={temperature}
             weather={weather}
+            code={code}
           />
         ))
       }

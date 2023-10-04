@@ -7,9 +7,9 @@ import Weather from './components/Weather'
 
 const CurrentCity = () => (
   <BackgroundImage image={bg}>
-    <div className="flex gap-48 py-16 px-24">
+    <div className="flex gap-48 py-16 px-24 justify-between">
       <div>
-        <Temperature value={19} />
+        <Temperature className='text-white text-7xl text-center' value={19} />
 
         <Weather value={'Cloudy'} />
         <div className="flex gap-8 mt-6">

@@ -1,7 +1,8 @@
 const Temperature = ({
-  value
+  value,
+  className
 }) => (
-  <div className="text-white text-7xl text-center">
+  <div className={className}>
     {`${value}°`}
   </div>
 )
