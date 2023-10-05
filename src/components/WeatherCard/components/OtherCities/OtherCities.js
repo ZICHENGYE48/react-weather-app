@@ -10,7 +10,7 @@ const OtherCities = ()=> {
     group()
     .then((res)=> res.data)
     .then((cities)=> {
-      const otherCities = cities.list.map(({ name, main, weather })=> ({
+      const otherCities = cities.list.sort((a, b) => a.name.localeCompare(b.name)).map(({ name, main, weather })=> ({
         name: name,
         temperature: main.temp,
         weather: weather[0].main,
