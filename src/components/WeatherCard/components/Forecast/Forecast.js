@@ -5,11 +5,11 @@ const Forecast = ({
   forecast
 }) => {
 
-  const forecastMapping = forecast?.slice(1,6).map((day)=> ({
-    day: new Date(day.dt * 1000).toLocaleString('en-US', {weekday: 'short'}), 
-    code: day.weather[0].icon, 
-    weather: day.weather[0].main, 
-    temperature: parseInt(day.temp.day)
+  const forecastMapping = forecast?.slice(1,6).map(({ dt,weather, temp })=> ({
+    day: new Date(dt * 1000).toLocaleString('en-US', { weekday: 'short' }), 
+    code: weather[0].icon, 
+    weather: weather[0].main, 
+    temperature: parseInt(temp.day)
   }))
 
   return (
