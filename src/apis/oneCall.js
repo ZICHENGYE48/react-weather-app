@@ -9,5 +9,13 @@ const SYDNEY_GEO = {
 }
 
 export const oneCall = ()=> {
-  return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${SYDNEY_GEO.lat}&lon=${SYDNEY_GEO.lon}&units=${UNITS}&appid=${API_KEY}`)
+  const { lat, lon } = SYDNEY_GEO
+  return axios.get(`https://api.openweathermap.org/data/2.5/onecall`, {
+    params: {
+      lat: lat,
+      lon: lon,
+      units: UNITS,
+      appid: API_KEY
+    }
+  })
 }
