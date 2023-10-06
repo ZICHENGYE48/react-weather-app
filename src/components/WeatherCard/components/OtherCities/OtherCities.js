@@ -2,7 +2,10 @@ import { useEffect, useState } from "react"
 import { group } from "../../../../apis/group"
 import City from "./components/City"
 
-const OtherCities = ()=> {
+const OtherCities = ({
+  onClick,
+  currentCity
+})=> {
   const [otherCities, setOtherCities] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -22,19 +25,20 @@ const OtherCities = ()=> {
   },[])
 
   return (
-    <div className="mr-12">
+    <div className="mr-12 min-h-[270px] min-w-[240px]">
       <div className="text-2xl tracking-widest mb-8">Other Cities</div>
       {
         loading ? <div>loading</div> : (
           <div>
             {
-              otherCities.map(({ name, temperature, weather, code })=> (
-                <City 
+              otherCities.filter(({ name })=> name !== currentCity).map(({ name, temperature, weather, code })=> (
+                <City
                   key={name}
                   name={name}
                   temperature={parseInt(temperature)}
                   weather={weather}
                   code={code}
+                  onClick={onClick}
                 />
               ))
             }

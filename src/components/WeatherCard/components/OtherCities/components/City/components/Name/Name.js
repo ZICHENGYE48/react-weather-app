@@ -1,7 +1,8 @@
 const Name = ({
-  children
+  children,
+  onClick
 }) => (
-  <div className="tracking-wider w-[120px]">
+  <div onClick={()=> onClick(children)} className="tracking-wider w-[120px]">
     {children}
   </div>
 )

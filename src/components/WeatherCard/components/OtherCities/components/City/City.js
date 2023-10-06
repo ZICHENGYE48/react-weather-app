@@ -6,10 +6,11 @@ const City = ({
   name,
   temperature,
   weather,
-  code
+  code,
+  onClick
 }) => (
-  <div className="mb-4 flex justify-between items-center">
-    <Name>{name}</Name>
+  <div className="mb-4 flex justify-between items-center cursor-pointer">
+    <Name onClick={onClick}>{name}</Name>
     <Temperature className="text-xl" value={temperature} />
     <WeatherIcon className="ml-8" weather={weather} code={code}/>
   </div>
