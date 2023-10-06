@@ -1,7 +1,4 @@
-import axios from 'axios'
-
-const API_KEY = 'd3100a764757dcbafccdd87f39b8e95f'
-const UNITS = 'metric'
+import OpenWeatherAPI from "../libs/OpenWeatherAPI"
 
 const CITIES = [
   { name: 'Melbourne', id: 2158177 },
@@ -11,11 +8,9 @@ const CITIES = [
 ]
 
 export const group = ()=> {
-  return axios.get(`https://api.openweathermap.org/data/2.5/group`, {
+  return OpenWeatherAPI.get('/group', {
     params: {
-      id: CITIES.map(({ id })=> id).join(),
-      units: UNITS,
-      appid: API_KEY
+      id: CITIES.map(({ id })=> id).join()
     }
   })
 }

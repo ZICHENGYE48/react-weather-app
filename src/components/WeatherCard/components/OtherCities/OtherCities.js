@@ -3,7 +3,7 @@ import { group } from "../../../../apis/group"
 import City from "./components/City"
 
 const OtherCities = ({
-  onClick,
+  onCityClick,
   currentCity
 })=> {
   const [otherCities, setOtherCities] = useState([])
@@ -25,7 +25,7 @@ const OtherCities = ({
   },[])
 
   return (
-    <div className="mr-12 min-h-[270px] min-w-[240px]">
+    <div className="mr-12 min-h-[280px] min-w-[240px]">
       <div className="text-2xl tracking-widest mb-8">Other Cities</div>
       {
         loading ? <div>loading</div> : (
@@ -38,7 +38,7 @@ const OtherCities = ({
                   temperature={parseInt(temperature)}
                   weather={weather}
                   code={code}
-                  onClick={onClick}
+                  onClick={onCityClick}
                 />
               ))
             }

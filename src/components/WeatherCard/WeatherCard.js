@@ -11,6 +11,7 @@ const WeatherCard = ()=> {
   const [currentCity,setCurrentCity] = useState('Sydney')
 
   useEffect(()=>{
+    setLoading(true)
     oneCall(currentCity)
     .then((response)=> response.data)
     .then((data)=>{
@@ -22,7 +23,7 @@ const WeatherCard = ()=> {
     })
   },[currentCity])
 
-  const onClick = (currentCity)=> {
+  const onCityClick = (currentCity)=> {
     setCurrentCity(currentCity)
   }
   
@@ -30,7 +31,7 @@ const WeatherCard = ()=> {
     <div className='bg-white rounded-3xl shadow-2xl shadow-black/50 overflow-hidden'>
       <CurrentCity loading={loading} currentCityWeather={currentCityWeather} currentCity={currentCity}/>
       <div className="flex px-12 py-9">
-        <OtherCities onClick={onClick} currentCity={currentCity}/>
+        <OtherCities onCityClick={onCityClick} currentCity={currentCity}/>
         <div className="w-[3px] bg-black/20"></div>
         <Forecast loading={loading} forecast={forecast} />
       </div>
