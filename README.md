@@ -13,3 +13,4 @@ Basic Functionalities :
 To-do List :
 - [ ] Unit test & E2E test
 - [ ] CI/CD
+- [ ] Responsiveness
