@@ -1,4 +1,4 @@
-# A weather app using React, React hooks, Tailwind CSS & Axios
+# A weather app using React, React hooks, Tailwind CSS, Axios & Unit test 
 
 View this project on https://zichengye48.github.io/react-weather-app/
 
@@ -8,9 +8,10 @@ Basic Functionalities :
 3. Provide a 5-day weather forecast for the currently selected city.
 4. Enable users to switch the current city by clicking on Perth, Melbourne, or Brisbane. The weather information will update accordingly.
 5. Whenever the current city is modified, the weather forecast will automatically adjust to reflect the new city's conditions.
+6. Unit test on main components
 
 
 To-do List :
-- [ ] Unit test & E2E test
+- [ ] Higher coverage of unit test
 - [ ] CI/CD
 - [ ] Responsiveness
