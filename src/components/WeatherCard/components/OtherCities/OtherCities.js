@@ -28,7 +28,7 @@ const OtherCities = ({
     <div className="mr-12 min-h-[280px] min-w-[240px]">
       <div className="text-2xl tracking-widest mb-8">Other Cities</div>
       {
-        loading ? <div>Loading...</div> : (
+        loading ? <div>Loading</div> : (
           <div>
             {
               otherCities.filter(({ name })=> name !== currentCity).map(({ name, temperature, weather, code })=> (
