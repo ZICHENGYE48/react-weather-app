@@ -9,9 +9,9 @@ Basic Functionalities :
 4. Enable users to switch the current city by clicking on Perth, Melbourne, or Brisbane. The weather information will update accordingly.
 5. Whenever the current city is modified, the weather forecast will automatically adjust to reflect the new city's conditions.
 6. Unit test on main components
+7. CI/CD
 
 
 To-do List :
 - [ ] Higher coverage of unit test
-- [ ] CI/CD
 - [ ] Responsiveness
