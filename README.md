@@ -1,4 +1,4 @@
-# A weather app using React, React hooks, Tailwind CSS, Axios & Unit test 
+# A weather app using React, React hooks, Tailwind CSS, Axios, Jest & CI/CD
 
 View this project on https://zichengye48.github.io/react-weather-app/
 
