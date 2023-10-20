@@ -1,5 +1,7 @@
 # A weather app using React, React hooks, Tailwind CSS, Axios, Jest & CI/CD
 
+This project was bootstrapped with Create React App.
+
 View this project on https://zichengye48.github.io/react-weather-app/
 
 Basic Functionalities : 
